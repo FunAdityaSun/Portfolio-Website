@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Projects from './components/Projects'
 import Hero from './components/Hero'
 import ProjectVideo from './components/ProjectVideo'
+import StartPlaceholder from './components/StartPlaceholder'
 
 function App() {
 
@@ -11,6 +12,9 @@ function App() {
   let videoPlayer = null;
   if (activeProject) {
     videoPlayer = <ProjectVideo activeProject={activeProject} />;
+  }
+  else {
+    videoPlayer = <StartPlaceholder />;
   }
 
   const handleProjSel = (project) => {
@@ -22,9 +26,19 @@ function App() {
     });
   }
 
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    setActiveProject(null);
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
   return (
     <div className="bg-slate-900 text-white min-h-screen">
-      <Navbar />
+      <Navbar onLogoClick={handleLogoClick} />
       <div className="h-8" />
       <div className="mx-auto px-10 py-12 flex flex-col md:flex-row items-start gap-12">
         <div id="home" className="flex-1 lg:sticky">
@@ -32,7 +46,7 @@ function App() {
           {videoPlayer}
           
         </div>
-        <div id="projects" className="flex-1 lg:h-[calc(100vh-8rem)] lg:overflow-y-auto hide-scrollbar">
+        <div className="flex-1 lg:h-[calc(100vh-8rem)] lg:overflow-y-auto hide-scrollbar">
           <Projects onProjectSel={handleProjSel} />
         </div>
       </div>

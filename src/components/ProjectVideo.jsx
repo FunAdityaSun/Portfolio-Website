@@ -14,15 +14,15 @@ export default function ProjectVideo({ activeProject }) {
     if (activeProject.videoUrl) {
       return (
         <video
-            key={activeProject.title + "-vid"}
-            ref={videoRef}
-            src={activeProject.videoUrl}
-            autoPlay
-            loop
-            muted
-            controls
-            className="w-full max-h-[65vh] object-contain bg-black no-volume-controls rounded-md"
-          />
+          key={activeProject.title + "-vid"}
+          ref={videoRef}
+          src={activeProject.videoUrl}
+          autoPlay
+          loop
+          muted
+          controls
+          className="w-full max-h-[65vh] object-contain bg-black no-volume-controls rounded-md"
+        />
       );
     } else if (activeProject.imageURL) {
       return (
@@ -35,8 +35,8 @@ export default function ProjectVideo({ activeProject }) {
       );
     } else if (activeProject.fallbackText) {
       return (
-        <div 
-          key={activeProject.title + "-custom-text"} 
+        <div
+          key={activeProject.title + "-custom-text"}
           className="w-full h-64 md:h-80 bg-slate-900 border border-slate-700 rounded-md flex flex-col items-center justify-center text-center p-8"
         >
           <h4 className="text-xl font-bold text-slate-300 mb-2">{activeProject.fallbackText}</h4>
@@ -44,8 +44,8 @@ export default function ProjectVideo({ activeProject }) {
       );
     } else {
       return (
-        <div 
-          key={activeProject.title + "-text"} 
+        <div
+          key={activeProject.title + "-text"}
           className="w-full h-64 md:h-80 bg-slate-900 border border-slate-700 rounded-md flex flex-col items-center justify-center text-center p-6"
         >
           <span className="text-4xl mb-4">🛠️</span>
@@ -57,7 +57,7 @@ export default function ProjectVideo({ activeProject }) {
 
   return (
     <div className="mt-8 p-4 bg-slate-800 rounded-lg border border-slate-700 shadow-2xl animate-fade-in">
-        {renderMedia()}
+      {renderMedia()}
       <div className="p-4 mt-2 bg-slate-950/50 rounded-md">
         <p className="text-emerald-400 text-sm font-mono">{activeProject.title} Demo</p>
       </div>
