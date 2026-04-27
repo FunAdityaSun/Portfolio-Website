@@ -1,4 +1,3 @@
-// src/components/Projects.jsx
 import { motion } from 'framer-motion';
 
 const portfolioProjects = [
@@ -57,7 +56,7 @@ const portfolioProjects = [
   },
   {
     title: "Portfolio Website",
-    tech: "React, Tailwind CSS",
+    tech: "React, Node.js,Tailwind CSS",
     desc: "Responsive portfolio website showcasing projects and skills.",
     fallbackText: "This website!",
     gitUrl: "https://github.com/FunAdityaSun/Portfolio-Website",

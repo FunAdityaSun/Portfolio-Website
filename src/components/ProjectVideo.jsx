@@ -1,4 +1,3 @@
-// src/components/ProjectVideo.jsx
 import { useRef, useEffect } from 'react';
 
 export default function ProjectVideo({ activeProject }) {
