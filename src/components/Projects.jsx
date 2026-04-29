@@ -56,7 +56,7 @@ const portfolioProjects = [
   },
   {
     title: "Portfolio Website",
-    tech: "React, Node.js,Tailwind CSS",
+    tech: "React, JavaScript, Tailwind CSS",
     desc: "Responsive portfolio website showcasing projects and skills.",
     fallbackText: "This website!",
     gitUrl: "https://github.com/FunAdityaSun/Portfolio-Website",
@@ -76,7 +76,7 @@ export default function Projects({ onProjectSel }) {
     <div className="mx-auto">
 
       <h2 className="text-4xl font-bold mb-6">Projects</h2>
-      <p className="text-xl text-slate-400 mb-8">Click on the projects to view demo and details. Scroll to view more projects.</p>
+      <p className="text-xl text-black-700 dark:text-almond-cream-100 mb-8">Click on the projects to view demo and details. Scroll to view more projects.</p>
 
       <div className="grid grid-cols-1 gap-6">
         {portfolioProjects.map((project, index) => (
@@ -89,11 +89,11 @@ export default function Projects({ onProjectSel }) {
 
             onClick={() => onProjectSel(project)}
 
-            className="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-slate-500 transition-colors"
+            className="bg-almond-cream-400 dark:bg-jet-black-900 p-6 border border-almond-cream-200 dark:border-jet-black-800 hover:border-black-900 hover:dark:border-khaki-beige-500 transition-colors shadow-md/50"
           >
             <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
-            <span className="text-emerald-400 text-sm font-mono block mb-4">{project.tech}</span>
-            <p className="text-slate-300 leading-relaxed">{project.desc}</p>
+            <span className="text-black-900 dark:text-almond-cream-100 text-sm font-mono block mb-4">{project.tech}</span>
+            <p className="text-black-900 dark:text-almond-cream-100 leading-relaxed">{project.desc}</p>
           </motion.div>
         ))}
       </div>

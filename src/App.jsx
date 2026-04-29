@@ -37,7 +37,7 @@ function App() {
   }
 
   return (
-    <div className="bg-slate-900 text-white min-h-screen">
+    <div className="bg-almond-cream-100 text-black-900 dark:bg-black-950 dark:text-khaki-beige-500 min-h-screen">
       <Navbar onLogoClick={handleLogoClick} />
       <div className="h-8" />
       <div className="mx-auto px-10 py-12 flex flex-col md:flex-row items-start gap-12">

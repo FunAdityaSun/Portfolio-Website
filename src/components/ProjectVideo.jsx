@@ -20,7 +20,7 @@ export default function ProjectVideo({ activeProject }) {
           loop
           muted
           controls
-          className="w-full max-h-[65vh] object-contain bg-black no-volume-controls rounded-md"
+          className="w-full max-h-[65vh] object-contain bg-black no-volume-controls"
         />
       );
     } else if (activeProject.imageURL) {
@@ -29,39 +29,39 @@ export default function ProjectVideo({ activeProject }) {
           key={activeProject.title + "-img"}
           src={activeProject.imageURL}
           alt={activeProject.title}
-          className="w-full max-h-[65vh] object-contain bg-black no-volume-controls rounded-md"
+          className="w-full max-h-[65vh] object-contain bg-black no-volume-controls"
         />
       );
     } else if (activeProject.fallbackText) {
       return (
         <div
           key={activeProject.title + "-custom-text"}
-          className="w-full h-64 md:h-80 bg-slate-900 border border-slate-700 rounded-md flex flex-col items-center justify-center text-center p-8"
+          className="w-full h-64 md:h-80 bg-jet-black-900 border border-jet-black-800 flex flex-col items-center justify-center text-center p-8"
         >
-          <h4 className="text-xl font-bold text-slate-300 mb-2">{activeProject.fallbackText}</h4>
+          <h4 className="text-xl font-bold text-khaki-beige-300 mb-2">{activeProject.fallbackText}</h4>
         </div>
       );
     } else {
       return (
         <div
           key={activeProject.title + "-text"}
-          className="w-full h-64 md:h-80 bg-slate-900 border border-slate-700 rounded-md flex flex-col items-center justify-center text-center p-6"
+          className="w-full h-64 md:h-80 bg-jet-black-900 border border-jet-black-800 flex flex-col items-center justify-center text-center p-6"
         >
           <span className="text-4xl mb-4">🛠️</span>
-          <p className="text-slate-300 text-lg font-medium">Details coming soon</p>
+          <p className="text-khaki-beige-300 text-lg font-medium">Details coming soon</p>
         </div>
       );
     }
   };
 
   return (
-    <div className="mt-8 p-4 bg-slate-800 rounded-lg border border-slate-700 shadow-2xl animate-fade-in">
+    <div className="mt-8 p-4 bg-almond-cream-500 border-almond-cream-200 dark:bg-jet-black-900 border dark:border-jet-black-800 shadow-lg/50 animate-fade-in">
       {renderMedia()}
-      <div className="p-4 mt-2 bg-slate-950/50 rounded-md">
-        <p className="text-emerald-400 text-sm font-mono">{activeProject.title} Demo</p>
+      <div className="p-4 mt-4 bg-almond-cream-400 dark:bg-jet-black-950">
+        <p className="text-black-900 dark:text-khaki-beige-500 text-sm font-mono">{activeProject.title} Demo</p>
       </div>
-      <div className="p-6 mt-4 bg-slate-950/50 rounded-md">
-        <p className="text-slate-300 leading-relaxed">{activeProject.technicalDetails}</p>
+      <div className="p-6 mt-4 bg-almond-cream-400 dark:bg-jet-black-950">
+        <p className="text-black-900 dark:text-almond-cream-100 leading-relaxed">{activeProject.technicalDetails}</p>
       </div>
     </div>
   );
