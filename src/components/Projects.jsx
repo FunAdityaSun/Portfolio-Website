@@ -55,6 +55,14 @@ const portfolioProjects = [
     technicalDetails: "The Drowsy Driver System is a real-time computer vision application developed using Python and deployed on a Raspberry Pi. The system utilizes a camera to monitor the driver's face, specifically tracking the eye aspect ratio (EAR) to detect signs of drowsiness. By analyzing the EAR, the system can determine if the driver's eyes are closing for extended periods, which is a common indicator of fatigue. If drowsiness is detected, the system can trigger alerts to warn the driver, helping to prevent accidents caused by falling asleep at the wheel. The raspberry pi is connected to a camera, an LED light, and a speaker, which are used to monitor the driver and provide visual and auditory alerts when drowsiness is detected."
   },
   {
+    title: "The Intelligent Bistro",
+    tech: "React Native Expo, JavaScript, TypeScript, Node.js, Express, Claude API",
+    desc: "Intelligent restaurant management system with AI-powered recommendations and cart management.",
+    videoUrl: "/videos/intelligent-bistro-demo.mp4",
+    gitUrl: "https://github.com/FunAdityaSun/intelligent-bistro",
+    technicalDetails: "The Intelligent Bistro is a modern restaurant management system that leverages AI technology to provide personalized recommendations and streamline cart management. Built with React Native Expo, the app offers a seamless user experience across multiple platforms. The backend is powered by Node.js and Express, ensuring robust performance and scalability. Integration with the Claude API enables sophisticated natural language processing for enhanced user interaction."
+  },
+  {
     title: "Portfolio Website",
     tech: "React, JavaScript, Tailwind CSS",
     desc: "Responsive portfolio website showcasing projects and skills.",
